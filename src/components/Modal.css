@@ -1,0 +1,93 @@
+/* --- Movie Modal Styles --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 10px;
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  color: #fff;
+  max-width: 900px;
+  width: 90%;
+  animation: zoomIn 0.4s ease-out;
+}
+
+.modal-poster {
+  width: 300px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.modal-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-overview {
+  margin: 1rem 0;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.5rem;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.85);
+  }
+}
+.trailer-container {
+  margin-top: 1.5rem;
+}
+
+.trailer-heading {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.trailer-video {
+  width: 100%;
+  height: 280px;
+  border: none;
+  border-radius: 6px;
+}
